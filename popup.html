@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 200px; padding: 15px; font-family: sans-serif; background: #1a1a1a; color: white; }
+    .container { display: flex; align-items: center; justify-content: space-between; }
+    h2 { margin: 0; font-size: 16px; }
+    /* Switch CSS */
+    .switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+    .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+    input:checked + .slider { background-color: #2196F3; }
+    input:checked + .slider:before { transform: translateX(18px); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sleekify Mode</h2>
+    <label class="switch">
+      <input type="checkbox" id="toggleBtn">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <p style="font-size: 11px; color: #aaa; margin-top: 10px;">Refresh page after toggling.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
